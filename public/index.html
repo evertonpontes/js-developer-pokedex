@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- roboto-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+    <!-- font-awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- my style -->
+    <link rel="stylesheet" href="assets/css/types.css">
+    <link rel="stylesheet" href="assets/css/search.css">
+    <link rel="stylesheet" href="assets/css/pokedex.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+</head>
+
+<body>
+    <div class="title">
+        <div class="poke-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pokeball" width="24"
+                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="9" cy="9" r="9" transform="translate(3 3)" />
+                <circle cx="12" cy="12" r="3" />
+                <path d="M3 12h6m6 0h6" />
+            </svg>
+        </div>
+        <h2>Pokédex</h2>
+    </div>
+    <section class="search">
+        <div class="search-bar">
+            <div class="input-text">
+                <br /><input type="text" name="pokemon" id="input-search" class="input-search" placeholder="Pesquisar">
+                <button type="button" class="search-btn" id="btn-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="search-banner">
+                <h2>Realize a busca por Pokémon pelo nome ou usando o número da Pokédex.</h2>
+            </div>
+        </div>
+    </section>
+    <section class="filter">
+        <div class="filter-bar">
+            <div class="subtitle">
+                <p>Use a pesquisa avançada para explorar Pokémon por tipo!</p>
+            </div>
+            <div class="filter-wrapper" id="filter-wrapper">
+                <div class="filter-type">
+                    <h2 class="filter-title">
+                        Pokemon types
+                    </h2>
+                    <span>Clique em um dos tipos abaixo para pesquisar.</span>
+                    <ul class="list-types" id="types">
+                    </ul>
+                </div>
+            </div>
+            <div class="open-filter-wrapper" id="open-filter-wrapper">
+                <span>Mostrar busca avançada</span>
+                <span><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="load hidden load-pokemons" id="load-pokemon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pokeball" width="24"
+                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="9" cy="9" r="9" transform="translate(3 3)" />
+                <circle cx="12" cy="12" r="3" />
+                <path d="M3 12h6m6 0h6" />
+            </svg>
+        </div>
+        <ol class="pokemon-list" id="pokemons">
+        </ol>
+        <div class="load-container" id="load-container">
+            <button class="btn-load-more" id="load-more">Carregar mais Pokémon</button>
+            <div class="load hidden" id="load-more-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pokeball" width="24"
+                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="9" cy="9" r="9" transform="translate(3 3)" />
+                    <circle cx="12" cy="12" r="3" />
+                    <path d="M3 12h6m6 0h6" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/pokemonModel.js"></script>
+    <script src="assets/js/pokeAPI.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

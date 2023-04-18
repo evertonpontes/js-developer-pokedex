@@ -1,0 +1,304 @@
+.search-bar {
+    width: 100%;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    background: rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #dadce0;
+}
+
+.search-bar .input-text {
+    width: 100%;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    margin: 1rem auto;
+    min-height: 44px;
+    display: flex;
+    padding: 0.5rem;
+}
+
+.input-text:focus-within {
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+}
+
+.input-text:hover {
+    cursor: text;
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+}
+
+.search-bar .input-text input.input-search {
+    border: none;
+    width: 100%;
+    align-self: center;
+    background: none;
+    margin: 0 14px;
+    font-weight: 300;
+}
+
+.search-bar .input-text button.search-btn {
+    width: 10%;
+    border: none;
+    background: transparent;
+    color: #9ea0a4;
+    border-left: 1px solid #dfe1e5;
+    padding-left: 0.65rem;
+    margin-right: 14px;
+}
+
+.search-bar .input-text button.search-btn:hover {
+    cursor: pointer;
+}
+
+.search-bar .search-banner {
+    width: 80%;
+    padding: 0.5rem;
+    color: rgba(125, 134, 142, 1);
+    border-radius: 5px;
+}
+
+.search-banner::before {
+    content: 'Pesquise por pokemons...';
+    display: flex;
+    text-align: center;
+}
+
+.search-banner h2 {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.filter-bar {
+    width: 100%;
+    padding: .5rem 1rem 1rem 1rem;
+    color: #7D868E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter-bar .subtitle {
+    width: 80%;
+    padding: .5rem;
+}
+
+.filter-bar .subtitle p {
+    font-weight: 300;
+    text-align: center;
+}
+
+.filter-bar .filter-wrapper {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding: 0 1rem 1rem 1rem;
+    
+}
+
+.filter-bar .filter-wrapper.open {
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.filter-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter-bar .filter-wrapper .filter-title {
+    font-weight: bolder;
+    margin: 1rem 0 .25rem 0 ;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #dadce0;
+    padding: 1rem 0;
+}
+
+.filter-bar .filter-wrapper span {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.filter-bar .filter-wrapper .filter-type .list-types {
+    width: 100%;
+    padding: 0;
+    margin: 2rem 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: #fff;
+}
+
+.filter-bar .filter-wrapper .filter-type .list-types .type {
+    max-width: 120px;
+    height: 45px;
+    width: 60%;
+    display: flex;
+    margin: 0.6rem auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.filter-bar .filter-wrapper .filter-type .list-types .type img {
+    width: 100%;
+    max-width: 24px;
+    height: 24px;
+}
+
+.filter-type .list-types .type:active {
+    filter: brightness(0.5);
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+}
+
+.filter-type .list-types .type:hover {
+    filter: brightness(0.5);
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+}
+
+.filter-bar .filter-wrapper .filter-type .list-types .type .name {
+    max-width: 110px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    display: none;
+}
+
+.filter-bar .filter-wrapper .filter-type .list-types .type:hover {
+    cursor: pointer;
+}
+
+.filter-bar .filter-wrapper .filter-type .list-types .type .toggle {
+    margin: .45rem;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: #fff;
+    color: #000;
+}
+
+.filter-bar .filter-wrapper .filter-type .list-types .type .toggle:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.filter-bar .filter-wrapper .filter-range-number .input-range .range-box {
+    width: 75px;
+    border-radius: 5px;
+}
+
+.filter-bar .open-filter-wrapper {
+    width: 100%;
+    padding: .35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dadce0;
+    border-radius: 1rem;
+    color: rgba(125, 134, 142, 1);
+}
+
+.filter-bar .open-filter-wrapper:hover {
+    cursor: pointer;
+}
+
+.filter-bar .open-filter-wrapper span:first-child {
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: 576px) {
+    .search-bar {
+        flex-direction: row;
+    }
+
+    .search-bar .input-text {
+        max-height: 50px;
+        display: flex;
+        margin: auto 1rem;
+    }
+
+    .search-btn {
+        height: 70%;
+        width: 70%;
+        align-self: center;
+    }
+
+    .search-bar .search-banner {
+        width: 40%;
+    }
+
+    .search-banner h2 {
+        text-align: center;
+    }
+
+    .filter-bar .open-filter-wrapper {
+        width: 60%;
+    }
+
+    .filter-bar .filter-wrapper .filter-type .list-types {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .filter-bar .filter-wrapper .filter-type .list-types .type {
+        justify-content: space-evenly;
+    }
+
+    .filter-bar .filter-wrapper .filter-type .list-types .type img {
+        max-width: 16px;
+        height: 16px;
+    }
+
+    .filter-bar .filter-wrapper .filter-type .list-types .type .name {
+        display: contents;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    .search-bar .input-text {
+        margin: auto 2rem;
+    }
+
+    .search-bar .input-text input.input-search {
+        width: 100%;
+    }
+
+    .search-bar .input-text button.search-btn {
+        width: 10%;
+    }
+
+    .filter-bar .filter-wrapper .filter-type .list-types {
+
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .search-banner h2 {
+        font-size: 16px;
+    }
+
+    .search-bar .input-text {
+        width: 95%;
+        min-height: 45px;
+        margin: auto 3rem;
+    }
+
+    .filter-bar .filter-wrapper .filter-type .list-types {
+        
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .search-btn {
+        width: 60%;
+    }
+}

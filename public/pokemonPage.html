@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- roboto-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+    <!-- font-awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- my style -->
+    <link rel="stylesheet" href="assets/css/types.css">
+    <link rel="stylesheet" href="assets/css/pokemon.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+
+</head>
+
+<body>
+    <section class="header">
+        <a class="nav-pokemon" id="previous" href="">
+        </a>
+        <a class="nav-pokemon" id="next" href="http://localhost:3000/">
+        </a>
+    </section>
+    <section class="pokemon" id="pokemon">
+    </section>
+    <section class="content">
+        <div class="menu-pokemon-status">
+            <ul class="menu-list" id="menu-options">
+                <li class="menu-option open">About</li>
+                <li class="menu-option">Base Stats</li>
+                <li class="menu-option">Evolutions</li>
+                <li class="menu-option">Damage Rel.</li>
+            </ul>
+        </div>
+        <div class="containers" id="pokemon-infos">
+            <div class="about" id="about">
+            </div>
+            <div class="base-stats hidden">
+                <div class="hist-graphic">
+                    <ul class="bar-list" id="bar-list">
+                    </ul>
+                </div>
+            </div>
+            <div class="evolutions hidden">
+                <div class="container">
+                    <ul class="evolution-tree" id="evolution-tree">
+                    </ul>
+                </div>
+            </div>
+            <div class="damage-rel hidden">
+                <div class="type-of-pokemon">
+                    <h3 class="title-damage-rel">
+                        Type 
+                    </h3>
+                    <ul class="pokemon-types types" id="pokemon-types">
+                        <li class="type grass">Grass</li>
+                        <li class="type poison">Poison</li>
+                    </ul>
+                </div>
+                <div class="weakness-of-pokemon">
+                    <h3 class="title-damage-rel">
+                        weakness 
+                    </h3>
+                    <ul class="pokemon-types weakness-types" id="weakness">
+                        <li class="type fire">Fire</li>
+                        <li class="type psychic">Psychic</li>
+                        <li class="type flying">Flying</li>
+                        <li class="type ice">Ice</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="btn-load-more">
+            <a href="/">Explorar mais Pokémons</a>
+        </div>
+    </section>
+
+    <script src="assets/js/pokemonModel.js"></script>
+    <script src="assets/js/pokemonMenu.js"></script>
+    <script src="assets/js/types.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/navigatePokemon.js"></script>
+</body>
+
+</html>
