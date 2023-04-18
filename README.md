@@ -47,7 +47,7 @@ Aqui estão algumas imagens e um GIF mostrando como é a Pokedex:
 
 ## Acesso ao site
 
-O site da Pokedex pode ser acessado pelo link: https://js-developer-pokedex-delta.vercel.app/
+O site da Pokedex pode ser acessado pelo link: https://js-developer-pokedex-mu.vercel.app/
 
 ## Como utilizar
 
