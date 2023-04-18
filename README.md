@@ -61,6 +61,13 @@ Para utilizar a Pokedex, basta clonar o repositório e instalar as dependências
 - Node.js
 - Express
 
+## Atualizações futuras
+
+- Adiciocar opção de trocar de tema da página entre claro e escuro
+- Adicionar um tooltip em alguns botões
+- Adicionar busca por fraquezas
+- Atualizar busca avançada pra poder adicionar mais de um tipo
+
 ## Autor
 
 Este projeto foi desenvolvido por **evertonpontes**.
